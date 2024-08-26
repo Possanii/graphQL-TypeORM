@@ -5,7 +5,6 @@
   "main": "src/index.ts",
   "scripts": {
     "dev": "nodemon -w src -r ts-node src/app.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier --check '**/**/*.{js,jsx,ts,tsx,css}'",
     "prettier:fix": "prettier --write '**/**/*.{js,jsx,ts,tsx,css}'",
     "docker-compose": "docker compose --env-file .env up -d"

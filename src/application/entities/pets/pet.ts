@@ -1,4 +1,4 @@
-import { Field, ID } from 'type-graphql'
+import { Field, ID, ObjectType } from 'type-graphql'
 import {
   BaseEntity,
   Column,
@@ -10,6 +10,7 @@ import {
 import { User } from '../user/user'
 
 @Entity('pets')
+@ObjectType()
 export class Pet extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   @Field(() => ID)
@@ -20,6 +21,10 @@ export class Pet extends BaseEntity {
   name!: string
 
   @ManyToOne(() => User, { nullable: true })
+  @Field(() => User)
+  owner?: User
+
+  @Column()
   @Field()
-  user?: User
+  ownerId!: string
 }
