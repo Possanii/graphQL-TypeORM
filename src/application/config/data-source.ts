@@ -13,7 +13,7 @@ export const AppDataSource = new DataSource({
   password: env.POSTGRES_DATABASE_PASSWORD,
   database: env.POSTGRES_DATABASE_NAME,
   synchronize: true,
-  logging: false,
+  logging: true,
   entities: [...entities],
   migrations: [],
   subscribers: [],

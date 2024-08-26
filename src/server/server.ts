@@ -5,7 +5,7 @@ import { AppDataSource } from '@/application/config/data-source'
 import { UserResolver } from '@/application/resolvers/user-resolver'
 
 export async function main() {
-  const conn = await AppDataSource.initialize()
+  await AppDataSource.initialize()
 
   const schema = await buildSchema({
     resolvers: [UserResolver],
