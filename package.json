@@ -5,12 +5,15 @@
   "main": "src/index.ts",
   "scripts": {
     "dev": "node --watch src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --check '**/**/*.{js,jsx,ts,tsx,css}'",
+    "prettier:fix": "prettier --write '**/**/*.{js,jsx,ts,tsx,css}'"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "@types/node": "^22.5.0",
+    "prettier": "^3.3.3",
     "typescript": "^5.5.4"
   }
 }
